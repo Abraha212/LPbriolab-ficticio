@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         :root {
-            --bg-primary: #0d1b2a;
-            --bg-secondary: #1b263b;
-            --bg-tertiary: #243447;
-            --accent-teal: #00d9b5;
-            --accent-gold: #ffc857;
-            --accent-coral: #ff6b6b;
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #252525;
+            --accent-orange: #FF7A3D;
+            --accent-pink: #E91E8C;
+            --accent-blue: #4F7DF3;
+            --accent-coral: #FF6347;
             --text-primary: #ffffff;
-            --text-secondary: #a8b2c1;
-            --gradient-main: linear-gradient(135deg, #00d9b5 0%, #00a896 50%, #028090 100%);
-            --gradient-gold: linear-gradient(135deg, #ffc857 0%, #e8a628 100%);
+            --text-secondary: #9ca3af;
+            --gradient-main: linear-gradient(135deg, #FF7A3D 0%, #E91E8C 100%);
+            --gradient-warm: linear-gradient(135deg, #FF9A5C 0%, #FF6B6B 50%, #E91E8C 100%);
+            --gradient-blue: linear-gradient(135deg, #4F7DF3 0%, #7C3AED 100%);
         }
 
         * {
@@ -42,7 +44,7 @@
         .cursor {
             width: 20px;
             height: 20px;
-            border: 2px solid var(--accent-teal);
+            border: 2px solid var(--accent-orange);
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
@@ -54,7 +56,7 @@
         .cursor-dot {
             width: 6px;
             height: 6px;
-            background: var(--accent-teal);
+            background: var(--accent-orange);
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
@@ -64,7 +66,7 @@
 
         .cursor.hover {
             transform: translate(-50%, -50%) scale(2);
-            background-color: rgba(0, 217, 181, 0.1);
+            background-color: rgba(255, 122, 61, 0.1);
         }
 
         /* Navbar */
@@ -149,7 +151,7 @@
 
         .nav-cta:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 217, 181, 0.4);
+            box-shadow: 0 10px 30px rgba(255, 122, 61, 0.4);
         }
 
         /* Hero Section */
@@ -167,9 +169,9 @@
             position: absolute;
             inset: 0;
             background: 
-                radial-gradient(ellipse at 20% 80%, rgba(0, 217, 181, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 20%, rgba(255, 200, 87, 0.1) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 50%, rgba(0, 168, 150, 0.08) 0%, transparent 70%);
+                radial-gradient(ellipse at 20% 80%, rgba(255, 122, 61, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(233, 30, 140, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(79, 125, 243, 0.08) 0%, transparent 70%);
             z-index: 0;
         }
 
@@ -190,7 +192,7 @@
         .shape-1 {
             width: 400px;
             height: 400px;
-            background: radial-gradient(circle, rgba(0, 217, 181, 0.2) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 122, 61, 0.2) 0%, transparent 70%);
             top: -100px;
             right: -100px;
             animation-delay: 0s;
@@ -199,7 +201,7 @@
         .shape-2 {
             width: 300px;
             height: 300px;
-            background: radial-gradient(circle, rgba(255, 200, 87, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(233, 30, 140, 0.15) 0%, transparent 70%);
             bottom: -50px;
             left: -50px;
             animation-delay: -5s;
@@ -208,7 +210,7 @@
         .shape-3 {
             width: 200px;
             height: 200px;
-            background: radial-gradient(circle, rgba(0, 168, 150, 0.2) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(79, 125, 243, 0.2) 0%, transparent 70%);
             top: 50%;
             left: 30%;
             animation-delay: -10s;
@@ -233,12 +235,12 @@
             align-items: center;
             gap: 10px;
             padding: 10px 25px;
-            background: rgba(0, 217, 181, 0.1);
-            border: 1px solid rgba(0, 217, 181, 0.3);
+            background: rgba(255, 122, 61, 0.15);
+            border: 1px solid rgba(255, 122, 61, 0.4);
             border-radius: 50px;
             margin-bottom: 30px;
             font-size: 0.9rem;
-            color: var(--accent-teal);
+            color: var(--accent-orange);
             animation: fadeInUp 1s ease;
         }
 
@@ -313,15 +315,15 @@
 
         .btn-primary:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 217, 181, 0.4);
+            box-shadow: 0 20px 40px rgba(255, 122, 61, 0.4);
         }
 
         .btn-secondary {
             padding: 18px 45px;
             background: transparent;
-            border: 2px solid var(--accent-teal);
+            border: 2px solid var(--accent-orange);
             border-radius: 50px;
-            color: var(--accent-teal);
+            color: var(--accent-orange);
             font-weight: 600;
             font-size: 1rem;
             cursor: pointer;
@@ -329,9 +331,9 @@
         }
 
         .btn-secondary:hover {
-            background: rgba(0, 217, 181, 0.1);
+            background: rgba(255, 122, 61, 0.1);
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 217, 181, 0.2);
+            box-shadow: 0 15px 35px rgba(255, 122, 61, 0.2);
         }
 
         @keyframes fadeInUp {
@@ -389,7 +391,7 @@
 
         .stat-item:hover {
             transform: translateY(-10px);
-            border-color: rgba(0, 217, 181, 0.3);
+            border-color: rgba(255, 122, 61, 0.3);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
@@ -423,9 +425,9 @@
         .section-tag {
             display: inline-block;
             padding: 8px 20px;
-            background: rgba(0, 217, 181, 0.1);
+            background: rgba(255, 122, 61, 0.15);
             border-radius: 30px;
-            color: var(--accent-teal);
+            color: var(--accent-orange);
             font-size: 0.85rem;
             font-weight: 600;
             text-transform: uppercase;
@@ -483,7 +485,7 @@
         .service-card:hover {
             transform: translateY(-15px) scale(1.02);
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-            border-color: rgba(0, 217, 181, 0.3);
+            border-color: rgba(255, 122, 61, 0.3);
         }
 
         .service-icon {
@@ -526,12 +528,12 @@
             right: 35px;
             width: 45px;
             height: 45px;
-            background: rgba(0, 217, 181, 0.1);
+            background: rgba(255, 122, 61, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent-teal);
+            color: var(--accent-orange);
             opacity: 0;
             transform: translateX(-10px);
             transition: all 0.4s ease;
@@ -608,7 +610,7 @@
         .about-float-card .number {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--accent-gold);
+            color: var(--accent-orange);
         }
 
         .about-float-card .label {
@@ -656,7 +658,7 @@
 
         .about-feature:hover {
             transform: translateX(10px);
-            background: rgba(0, 217, 181, 0.1);
+            background: rgba(255, 122, 61, 0.1);
         }
 
         .about-feature i {
@@ -750,7 +752,7 @@
             gap: 5px;
             justify-content: center;
             margin-bottom: 30px;
-            color: var(--accent-gold);
+            color: var(--accent-orange);
         }
 
         /* Pricing */
@@ -779,8 +781,8 @@
 
         .pricing-card.featured {
             transform: scale(1.05);
-            border-color: var(--accent-teal);
-            box-shadow: 0 30px 60px rgba(0, 217, 181, 0.2);
+            border-color: var(--accent-orange);
+            box-shadow: 0 30px 60px rgba(255, 122, 61, 0.2);
         }
 
         .pricing-card.featured::before {
@@ -810,7 +812,7 @@
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 15px;
-            color: var(--accent-teal);
+            color: var(--accent-orange);
         }
 
         .pricing-price {
@@ -847,7 +849,7 @@
         }
 
         .pricing-features li i {
-            color: var(--accent-teal);
+            color: var(--accent-orange);
         }
 
         .pricing-features li:last-child {
@@ -937,7 +939,7 @@
 
         .contact-item:hover {
             transform: translateX(10px);
-            background: rgba(0, 217, 181, 0.1);
+            background: rgba(255, 122, 61, 0.1);
         }
 
         .contact-item i {
@@ -995,8 +997,8 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--accent-teal);
-            box-shadow: 0 0 20px rgba(0, 217, 181, 0.2);
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 20px rgba(255, 122, 61, 0.2);
         }
 
         .form-group textarea {
@@ -1099,7 +1101,7 @@
         }
 
         .footer-column ul li a:hover {
-            color: var(--accent-teal);
+            color: var(--accent-orange);
             transform: translateX(5px);
         }
 
@@ -1137,7 +1139,7 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background: var(--accent-teal);
+            background: var(--accent-orange);
             border-radius: 50%;
             opacity: 0.3;
             animation: particleFloat 15s infinite linear;
